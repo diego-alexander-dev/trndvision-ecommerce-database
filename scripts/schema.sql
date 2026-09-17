@@ -3,7 +3,6 @@ CREATE TABLE campanas_mkt (
     nombre_campana VARCHAR2(100) NOT NULL,
     fecha_inicio DATE NOT NULL
 );
-select * from metricas;
 CREATE TABLE presupuestos (
     id_presupuesto NUMBER GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1) PRIMARY KEY,
     monto_asignado NUMBER(10,2) NOT NULL,
@@ -23,7 +22,7 @@ CREATE TABLE canales (
     tipo_plataforma VARCHAR2(50)
 );
 
--- Corregida: Aquí incluimos la columna de ID_CAMPANA física conectada con la maestra
+
 CREATE TABLE metricas (
     id_metrica NUMBER GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1) PRIMARY KEY,
     id_campana NUMBER NOT NULL,
